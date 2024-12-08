@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import JobsPage from './pages/JobsPage'; // Placeholder for Jobs page
+import CompaniesPage from './pages/CompaniesPage'; // Placeholder for Companies page
+import CandidatesPage from './pages/CandidatesPage'; // Placeholder for Candidates page
+import ApplicationsPage from './pages/ApplicationsPage'; // Placeholder for Applications page
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app-container">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/jobs" element={<JobsPage />} />
+          <Route path="/companies" element={<CompaniesPage />} />
+          <Route path="/candidates" element={<CandidatesPage />} />
+          <Route path="/applications" element={<ApplicationsPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
