@@ -9,6 +9,7 @@ import ApplicationsPage from './pages/ApplicationsPage'; // Placeholder for Appl
 
 function App() {
   return (
+
     <Router>
       <div className="app-container">
         <Routes>
