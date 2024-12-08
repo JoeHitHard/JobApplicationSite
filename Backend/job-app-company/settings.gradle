@@ -1,0 +1,2 @@
+rootProject.name = 'job-app-company'
+includeBuild '../job-app-commons'
